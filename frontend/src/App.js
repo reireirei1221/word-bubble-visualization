@@ -19,6 +19,11 @@ const WordBubble = () => {
         const width = 500;
         const height = 300;
 
+        if (Object.keys(wordCounts).length === 0) {
+            // If wordCounts is empty, return
+            return;
+        }
+
         let svg;
         if (svgRef.current) {
             svg = d3.select(svgRef.current);
